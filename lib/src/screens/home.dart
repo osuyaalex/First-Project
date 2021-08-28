@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
                   leading: Icon(Icons.search, color: red,),
                   title: TextField(
                     decoration: InputDecoration(
-                      hintText: "Find food and resturants",
+                      hintText: "Find food and resturant",
                       border: InputBorder.none
                     ),
                   ),
