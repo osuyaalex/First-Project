@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newproject/src/modules/category.dart';
 
-import '../commons.dart';
+import '../helpers/commons.dart';
 import 'title.dart';
 
 List<Category> categoriesList = [

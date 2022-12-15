@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:newproject/small_floating_button.dart';
+import 'package:newproject/src/helpers/screen_navigation.dart';
 import 'package:newproject/src/modules/featured_products.dart';
+import 'package:newproject/src/screens/bag.dart';
 import 'package:newproject/src/widgets/bottom_navigation.dart';
 import 'package:newproject/src/widgets/categories.dart';
 import 'package:newproject/src/widgets/title.dart';
-import '../commons.dart';
+import '../helpers/commons.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -26,12 +28,14 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(8.0),
                   child: CustomText(
                     text: "what would you like to eat?",
+                    colors: black,
                     size: 18,
                   )
 
                 ),
                 Stack(
                   children: <Widget>[
+
                     IconButton(icon: Icon(Icons.notifications_none), onPressed: (){}),
                     Positioned(
                       top: 12,
@@ -104,7 +108,8 @@ class _HomeState extends State<Home> {
                      padding: const EdgeInsets.all(8),
                    child: ClipRRect(
                        borderRadius: BorderRadius.circular(20),
-                       child: Image.asset("images/images (2).jpeg")),
+                       child: Image.asset("images/images (2).jpeg")
+                   ),
                    ),
                  ),
                 Padding(
@@ -196,18 +201,32 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
            BottomNavIcon(
+             onTap: (){
+
+             },
              image: "images.png",
              name: "home",
            ),
             BottomNavIcon(
+              onTap: (){
+                changeScreen(context, ShoppingBag());
+
+              },
               image: "images (1).png",
               name: "shop",
             ),
             BottomNavIcon(
+              onTap: (){
+
+              },
               image: "images (6).jpeg",
               name: "Near by",
             ),
             BottomNavIcon(
+              onTap: (){
+
+
+              },
               image: "images (4).jpeg",
               name: "Profile",
             ),
